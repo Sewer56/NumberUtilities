@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sewer56.NumberUtilities", "Sewer56.NumberUtilities\Sewer56.NumberUtilities.csproj", "{F9A0137A-C961-4D8A-9683-01EE7A625418}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sewer56.NumberUtilities.Tests", "Sewer56.NumberUtilities.Tests\Sewer56.NumberUtilities.Tests.csproj", "{19108ED6-C567-4D89-A4B5-262369E71E32}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F9A0137A-C961-4D8A-9683-01EE7A625418}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9A0137A-C961-4D8A-9683-01EE7A625418}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9A0137A-C961-4D8A-9683-01EE7A625418}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9A0137A-C961-4D8A-9683-01EE7A625418}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19108ED6-C567-4D89-A4B5-262369E71E32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19108ED6-C567-4D89-A4B5-262369E71E32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19108ED6-C567-4D89-A4B5-262369E71E32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19108ED6-C567-4D89-A4B5-262369E71E32}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EC2F209F-90B7-4E12-8462-3343B3ACB975}
+	EndGlobalSection
+EndGlobal
