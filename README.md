@@ -1,6 +1,6 @@
 # Sewer56.NumberUtilities
 
-[![Build status](https://ci.appveyor.com/api/projects/status/pdbufjv1h66ki40v?svg=true)](https://ci.appveyor.com/project/sewer56lol/numberutilities)[![Coverage](https://codecov.io/gh/Sewer56/Sewer56.NumberUtilities/branch/master/graph/badge.svg)](https://codecov.io/gh/Sewer56/Sewer56.NumberUtilities)
+[![Build status](https://ci.appveyor.com/api/projects/status/pdbufjv1h66ki40v?svg=true)](https://ci.appveyor.com/project/sewer56lol/numberutilities) [![Test status](https://img.shields.io/appveyor/tests/sewer56lol/numberutilities)](https://ci.appveyor.com/project/sewer56lol/numberutilities)
 
 This library contains various utilities and extension methods I use in my projects on a semi-regular basis. You are welcome to use them too, either by copy-pasting them or by referencing this library.
 
