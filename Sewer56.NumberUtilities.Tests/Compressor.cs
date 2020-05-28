@@ -46,6 +46,19 @@ namespace Sewer56.NumberUtilities.Tests
         }
 
         [Fact]
+        public void CompressFloatWithMin()
+        {
+            float original = 1.214814305f;
+            float minimum = -2.5f;
+            float maximum = 2.5f;
+
+            var compressed = new CompressedNumber<float, Float, ushort, UShort>(original, minimum, maximum);
+            float decompressed = compressed.GetValue(minimum, maximum);
+
+            Assert.Equal(original, decompressed, 4);
+        }
+
+        [Fact]
         public void CompressDouble()
         {
             double original = 0.7286906838f;
@@ -55,6 +68,19 @@ namespace Sewer56.NumberUtilities.Tests
             double decompressed = compressed.GetValue(maximum);
 
             Assert.Equal(original, decompressed, 5);
+        }
+
+        [Fact]
+        public void CompressDoubleWithMin()
+        {
+            double original = 0.7286906838f;
+            double minimum = -2.5f;
+            double maximum = 2.5f;
+
+            var compressed = new CompressedNumber<double, Double, ushort, UShort>(original, minimum, maximum);
+            double decompressed = compressed.GetValue(minimum, maximum);
+
+            Assert.Equal(original, decompressed, 4);
         }
 
         [Fact]

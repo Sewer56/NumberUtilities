@@ -3,7 +3,7 @@
     /// <summary>
     /// Interface that represents a floating point or integer number, allowing for easy translations between types.
     /// </summary>
-    public interface INumber<T> where T : unmanaged
+    public interface INumber<T> : INumber where T : unmanaged
     {
         /// <summary>
         /// The value of the underlying type.
@@ -15,11 +15,6 @@
         /// </summary>
         T MaxValue { get; }
 
-        /// <summary>
-        /// Maximum value the number can hold, as a double.
-        /// </summary>
-        double MaxValueAsDouble { get; }
-
         INumber<T> FromFloat(float value);
         INumber<T> FromDouble(double value);
         INumber<T> FromByte(byte value);
@@ -30,6 +25,14 @@
         INumber<T> FromUInt(uint value);
         INumber<T> FromLong(long value);
         INumber<T> FromULong(ulong value);
+    }
+
+    public interface INumber
+    {
+        /// <summary>
+        /// Maximum value the number can hold, as a double.
+        /// </summary>
+        double MaxValueAsDouble { get; }
 
         float AsFloat();
         double AsDouble();

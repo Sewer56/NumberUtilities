@@ -33,7 +33,6 @@ namespace Sewer56.NumberUtilities
         }
 
         // Unpack to Float
-
         /// <summary>
         /// Unpacks a floating point number from an integer T, given the value of T, the maximum value of the number and the maximum value of T.
         /// </summary>
