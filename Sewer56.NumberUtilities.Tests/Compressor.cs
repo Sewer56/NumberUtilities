@@ -71,6 +71,18 @@ namespace Sewer56.NumberUtilities.Tests
         }
 
         [Fact]
+        public void Equality()
+        {
+            double original = 0.7286906838f;
+            double maximum  = 5f;
+
+            var compressed = new CompressedNumber<double, Double, ushort, UShort>(original, maximum);
+            var recompressed = new CompressedNumber<double, Double, ushort, UShort>(original, maximum);
+
+            Assert.Equal(recompressed, compressed);
+        }
+
+        [Fact]
         public void CompressDoubleWithMin()
         {
             double original = 0.7286906838f;

@@ -1,4 +1,6 @@
-﻿using Sewer56.NumberUtilities.Primitives.Interfaces;
+﻿using System;
+using System.Collections.Generic;
+using Sewer56.NumberUtilities.Primitives.Interfaces;
 
 namespace Sewer56.NumberUtilities
 {
@@ -9,8 +11,7 @@ namespace Sewer56.NumberUtilities
     /// <typeparam name="TSourceNumber">The <see cref="INumber{T}"/> struct type belonging to the <see cref="TSource"/></typeparam>
     /// <typeparam name="TDestination">The destination number to be compressed inside another number format. (e.g. short) i.e. compresses float to short</typeparam>
     /// <typeparam name="TDestinationNumber">The <see cref="INumber{T}"/> struct type belonging to the <see cref="TDestination"/></typeparam>
-    public struct CompressedNumber<TSource, TSourceNumber, TDestination, TDestinationNumber> 
-        where TSource : unmanaged 
+    public struct CompressedNumber<TSource, TSourceNumber, TDestination, TDestinationNumber> : IEquatable<CompressedNumber<TSource, TSourceNumber, TDestination, TDestinationNumber>> where TSource : unmanaged 
         where TDestination : unmanaged
         where TSourceNumber : INumber<TSource>
         where TDestinationNumber : INumber<TDestination>
@@ -88,5 +89,9 @@ namespace Sewer56.NumberUtilities
             var result = NumberCompressor<TDestination, TDestinationNumber>.Decompress<TSource, TSourceNumber>(Value, maxValue);
             return result.FromDouble(result.AsDouble() + minValue.AsDouble()).Value;
         }
+
+        public bool Equals(CompressedNumber<TSource, TSourceNumber, TDestination, TDestinationNumber> other) => EqualityComparer<TDestination>.Default.Equals(Value.Value, other.Value.Value);
+        public override bool Equals(object obj) => obj is CompressedNumber<TSource, TSourceNumber, TDestination, TDestinationNumber> other && Equals(other);
+        public override int GetHashCode() => EqualityComparer<TDestination>.Default.GetHashCode(Value.Value);
     }
 }
