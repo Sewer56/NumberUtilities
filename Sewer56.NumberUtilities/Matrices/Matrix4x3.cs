@@ -1,0 +1,31 @@
+﻿using Sewer56.NumberUtilities.Primitives.Interfaces;
+using Sewer56.NumberUtilities.Vectors;
+
+namespace Sewer56.NumberUtilities.Matrices
+{
+    /// <summary>
+    /// Represents a matrix composed of 4 elements.
+    /// </summary>
+    /// <typeparam name="TSource">The underlying number type behind the <see cref="TSourceNumber"/> (e.g. float)</typeparam>
+    /// <typeparam name="TSourceNumber">The <see cref="INumber{T}"/> struct type belonging to the <see cref="TSource"/></typeparam>
+    public struct Matrix4x3<TSource, TSourceNumber> where TSource : unmanaged where TSourceNumber : INumber<TSource>
+    {
+        public Vector3<TSource, TSourceNumber> X;
+        public Vector3<TSource, TSourceNumber> Y;
+        public Vector3<TSource, TSourceNumber> Z;
+        public Vector3<TSource, TSourceNumber> W;
+
+        public Matrix4x3(Vector3<TSource, TSourceNumber> x, Vector3<TSource, TSourceNumber> y, Vector3<TSource, TSourceNumber> z, Vector3<TSource, TSourceNumber> w)
+        {
+            X = x;
+            Y = y;
+            Z = z;
+            W = w;
+        }
+
+        public Matrix4x3<TSource, TSourceNumber> Add(Matrix4x3<TSource, TSourceNumber> other) => new Matrix4x3<TSource, TSourceNumber>(X.Add(other.X), Y.Add(other.Y), Z.Add(other.Z), W.Add(other.W));
+        public Matrix4x3<TSource, TSourceNumber> Subtract(Matrix4x3<TSource, TSourceNumber> other) => new Matrix4x3<TSource, TSourceNumber>(X.Subtract(other.X), Y.Subtract(other.Y), Z.Subtract(other.Z), W.Subtract(other.W));
+        public Matrix4x3<TSource, TSourceNumber> Multiply(Matrix4x3<TSource, TSourceNumber> other) => new Matrix4x3<TSource, TSourceNumber>(X.Multiply(other.X), Y.Multiply(other.Y), Z.Multiply(other.Z), W.Multiply(other.W));
+        public Matrix4x3<TSource, TSourceNumber> Divide(Matrix4x3<TSource, TSourceNumber> other) => new Matrix4x3<TSource, TSourceNumber>(X.Divide(other.X), Y.Divide(other.Y), Z.Divide(other.Z), W.Divide(other.W));
+    }
+}
