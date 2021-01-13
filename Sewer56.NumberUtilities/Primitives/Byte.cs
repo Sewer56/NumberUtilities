@@ -41,6 +41,11 @@ namespace Sewer56.NumberUtilities.Primitives
         public INumber<byte> FromLong(long value)        => new Byte(value);
         public INumber<byte> FromULong(ulong value)      => new Byte(value);
 
+        public byte Add(byte other) => (byte) (Value + other);
+        public byte Subtract(byte other) => (byte) (Value - other);
+        public byte Multiply(byte other) => (byte) (Value * other);
+        public byte Divide(byte other) => (byte) (Value / other);
+
         public void SetValue(float value)    => Value = (byte) value;
         public void SetValue(double value)   => Value = (byte) value;
         public void SetValue(byte value)     => Value = (byte) value;
@@ -53,5 +58,6 @@ namespace Sewer56.NumberUtilities.Primitives
         public void SetValue(ulong value)    => Value = (byte) value;
 
         public static implicit operator Byte(byte b) => new Byte(b);
+        public static implicit operator byte(Byte b) => b.Value;
     }
 }

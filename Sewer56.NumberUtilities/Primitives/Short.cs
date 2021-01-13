@@ -41,6 +41,11 @@ namespace Sewer56.NumberUtilities.Primitives
         public INumber<short> FromLong(long value)        => new Short(value);
         public INumber<short> FromULong(ulong value)      => new Short(value);
 
+        public short Add(short other) => (short)(Value + other);
+        public short Subtract(short other) => (short)(Value - other);
+        public short Multiply(short other) => (short)(Value * other);
+        public short Divide(short other) => (short)(Value / other);
+
         public void SetValue(float value)    => Value = (short) value;
         public void SetValue(double value)   => Value = (short) value;
         public void SetValue(byte value)     => Value = (short) value;
@@ -53,5 +58,6 @@ namespace Sewer56.NumberUtilities.Primitives
         public void SetValue(ulong value)    => Value = (short) value;
 
         public static implicit operator Short(short s) => new Short(s);
+        public static implicit operator short(Short b) => b.Value;
     }
 }

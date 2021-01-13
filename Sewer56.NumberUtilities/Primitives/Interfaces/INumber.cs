@@ -25,6 +25,11 @@
         INumber<T> FromUInt(uint value);
         INumber<T> FromLong(long value);
         INumber<T> FromULong(ulong value);
+
+        T Add(T other);
+        T Subtract(T other);
+        T Multiply(T other);
+        T Divide(T other);
     }
 
     public interface INumber
