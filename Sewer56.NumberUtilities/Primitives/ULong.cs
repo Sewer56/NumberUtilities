@@ -46,6 +46,11 @@ namespace Sewer56.NumberUtilities.Primitives
         public ulong Multiply(ulong other) => (ulong)(Value * other);
         public ulong Divide(ulong other) => (ulong)(Value / other);
 
+        public INumber<ulong> Add(INumber<ulong> other) => new ULong(this.Value + other.Value);
+        public INumber<ulong> Subtract(INumber<ulong> other) => new ULong(this.Value - other.Value);
+        public INumber<ulong> Multiply(INumber<ulong> other) => new ULong(this.Value * other.Value);
+        public INumber<ulong> Divide(INumber<ulong> other) => new ULong(this.Value * other.Value);
+
         public void SetValue(float value)    => Value = (ulong) value;
         public void SetValue(double value)   => Value = (ulong) value;
         public void SetValue(byte value)     => Value = (ulong) value;

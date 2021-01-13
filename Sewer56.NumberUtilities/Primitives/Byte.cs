@@ -46,6 +46,11 @@ namespace Sewer56.NumberUtilities.Primitives
         public byte Multiply(byte other) => (byte) (Value * other);
         public byte Divide(byte other) => (byte) (Value / other);
 
+        public INumber<byte> Add(INumber<byte> other) => new Byte(this.Value + other.Value);
+        public INumber<byte> Subtract(INumber<byte> other) => new Byte(this.Value - other.Value);
+        public INumber<byte> Multiply(INumber<byte> other) => new Byte(this.Value * other.Value);
+        public INumber<byte> Divide(INumber<byte> other) => new Byte(this.Value * other.Value);
+
         public void SetValue(float value)    => Value = (byte) value;
         public void SetValue(double value)   => Value = (byte) value;
         public void SetValue(byte value)     => Value = (byte) value;

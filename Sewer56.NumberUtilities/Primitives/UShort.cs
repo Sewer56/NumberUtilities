@@ -46,6 +46,11 @@ namespace Sewer56.NumberUtilities.Primitives
         public ushort Multiply(ushort other) => (ushort)(Value * other);
         public ushort Divide(ushort other) => (ushort)(Value / other);
 
+        public INumber<ushort> Add(INumber<ushort> other) => new UShort(this.Value + other.Value);
+        public INumber<ushort> Subtract(INumber<ushort> other) => new UShort(this.Value - other.Value);
+        public INumber<ushort> Multiply(INumber<ushort> other) => new UShort(this.Value * other.Value);
+        public INumber<ushort> Divide(INumber<ushort> other) => new UShort(this.Value * other.Value);
+
         public void SetValue(float value)    => Value = (ushort) value;
         public void SetValue(double value)   => Value = (ushort) value;
         public void SetValue(byte value)     => Value = (ushort) value;

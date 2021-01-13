@@ -30,6 +30,11 @@
         T Subtract(T other);
         T Multiply(T other);
         T Divide(T other);
+
+        INumber<T> Add(INumber<T> other);
+        INumber<T> Subtract(INumber<T> other);
+        INumber<T> Multiply(INumber<T> other);
+        INumber<T> Divide(INumber<T> other);
     }
 
     public interface INumber

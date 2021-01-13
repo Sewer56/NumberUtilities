@@ -46,6 +46,11 @@ namespace Sewer56.NumberUtilities.Primitives
         public int Multiply(int other) => (int)(Value * other);
         public int Divide(int other) => (int)(Value / other);
 
+        public INumber<int> Add(INumber<int> other) => new Int(this.Value + other.Value);
+        public INumber<int> Subtract(INumber<int> other) => new Int(this.Value - other.Value);
+        public INumber<int> Multiply(INumber<int> other) => new Int(this.Value * other.Value);
+        public INumber<int> Divide(INumber<int> other) => new Int(this.Value * other.Value);
+
         public void SetValue(float value)    => Value = (int) value;
         public void SetValue(double value)   => Value = (int) value;
         public void SetValue(byte value)     => Value = (int) value;
